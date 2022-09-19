@@ -13,7 +13,7 @@ void PrintArray(string[] array)
     int count = array.Length;
 
 
-    Console.WriteLine($"Входной массив: ");
+    Console.WriteLine($"Полученный массив: ");
     Console.Write($">> ");
     for (int i = 0; i < count; i++)
     {
@@ -23,11 +23,21 @@ void PrintArray(string[] array)
 }
 
 
-
 Console.WriteLine("Введите колличество элементов: ");
 int num = int.Parse(Console.ReadLine()!);
 string[] array = new string[num];
+
 FillArray(array);
 PrintArray(array);
+string[] arrEnd = new string[num];
+for (int i = 0; i < array.GetLength(0); i++)
+{
+    if (array[i].Length == 3)
+    {
+        arrEnd[i] = array[i];
+    }
+}
+
+PrintArray(arrEnd);
 
 
