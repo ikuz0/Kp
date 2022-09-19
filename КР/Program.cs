@@ -32,7 +32,7 @@ PrintArray(array);
 string[] arrEnd = new string[num];
 for (int i = 0; i < array.GetLength(0); i++)
 {
-    if (array[i].Length == 3)
+    if (array[i].Length <= 3)
     {
         arrEnd[i] = array[i];
     }
